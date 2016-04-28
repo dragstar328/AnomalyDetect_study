@@ -8,6 +8,7 @@ head(X)
 summary(X)
 v = ggplot(Davis, aes(Davis$weight, Davis$height)) + geom_point(colour="pink")
 v
+ggsave("chap2/img/Davis_scatter.jpg", v)
 
 mx = colMeans(X)
 mx
@@ -27,3 +28,4 @@ th
 p = ggplot() + geom_point(aes(1:200, ad$a), colour="pink") + labs(title="anomaly detect", x="number", y="anomaly")
 l = geom_hline(yintercept=th, colour="blue", linetype="dashed")
 p + l
+ggsave("chap2/img/anomary_2_dim.jpg", p + l)
